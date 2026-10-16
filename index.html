@@ -267,10 +267,10 @@ function sendOrder(){const{t}=totals();if(t<MIN)return;const nome=document.getEl
  if(!nome){alert('Informe seu nome 😊');return}if(tipo==='Delivery'&&!end){alert('Informe o endereço de entrega');return}
  const pag=document.getElementById('fpag').value,troco=document.getElementById('ftrocov').value.trim(),obs=document.getElementById('fobs').value.trim();
  const L='━━━━━━━━━━━━━━━';const d=new Date(),hh=d.toLocaleTimeString('pt-BR',{hour:'2-digit',minute:'2-digit'}),dd=d.toLocaleDateString('pt-BR');
- let m=`✨ *NOVO PEDIDO - HL SABORES* ✨\n${L}\n`;for(const k in cart)m+=`✅ *${cart[k].q}x* ${k} — ${brl(cart[k].q*cart[k].p)}\n`;
- m+=`${L}\n⭐ *TOTAL: ${brl(t)}*\n${L}\n✏️ *Nome:* ${nome}\n⏩ *Receber:* ${tipo}\n`;if(tipo==='Delivery')m+=`➡️ *Endereço:* ${end}\n`;
- m+=`✔️ *Pagamento:* ${pag}${pag==='Dinheiro'&&troco?' (troco para '+troco+')':''}\n`;if(obs)m+=`✍️ *Obs.:* ${obs}\n`;
- m+=`${L}\n⏰ Pedido feito pelo site em ${dd} às ${hh}\n❤️ Obrigado pela preferência!`;
+ let m=`✨ *NOVO PEDIDO - HL SABORES* ✨\n${L}\n`;for(const k in cart)m+=`🥟 *${cart[k].q}x* ${k} — ${brl(cart[k].q*cart[k].p)}\n`;
+ m+=`${L}\n💰 *TOTAL: ${brl(t)}*\n${L}\n👤 *Nome:* ${nome}\n${tipo==='Delivery'?'🛵':'🏠'} *Receber:* ${tipo}\n`;if(tipo==='Delivery')m+=`📍 *Endereço:* ${end}\n`;
+ m+=`${pag==='Pix'?'💠':pag==='Dinheiro'?'💵':'💳'} *Pagamento:* ${pag}${pag==='Dinheiro'&&troco?' (troco para '+troco+')':''}\n`;if(obs)m+=`📝 *Obs.:* ${obs}\n`;
+ m+=`${L}\n🕒 Pedido feito pelo site em ${dd} às ${hh}\n❤️ Obrigado pela preferência!`;
  window.open('https://api.whatsapp.com/send?phone='+PHONE+'&text='+encodeURIComponent(m),'_blank');}
 renderQty();
 
