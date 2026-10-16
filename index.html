@@ -57,6 +57,19 @@ section{padding:80px 0}
 .card .ic{font-size:40px;width:70px;height:70px;border-radius:20px;background:var(--creme);display:grid;place-items:center;margin-bottom:16px}
 .card h3{font-family:'Playfair Display',serif;color:var(--vinho2);font-size:21px;margin-bottom:6px}
 .card p{color:var(--suave);font-size:15px}
+.info-bar{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin:-20px 0 34px}
+.info-bar span{background:#fff;border:1px solid #f0e2c8;border-radius:999px;padding:8px 16px;font-size:14px;font-weight:600;color:var(--vinho2)}
+.menu{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:16px}
+.item{display:flex;gap:14px;align-items:center;background:#fff;border-radius:20px;padding:16px;border:1px solid #f3e6cf;box-shadow:0 6px 20px rgba(122,31,43,.06)}
+.item .ic{font-size:30px;width:58px;height:58px;flex:none;border-radius:16px;background:var(--creme);display:grid;place-items:center}
+.item .tx{flex:1;min-width:0}
+.item h3{font-family:'Playfair Display',serif;color:var(--vinho2);font-size:18px}
+.item p{color:var(--suave);font-size:13.5px;line-height:1.45}
+.pr{margin-top:4px;display:flex;gap:8px;align-items:baseline}.pr s{color:#b9a597;font-size:13px}.pr b{color:var(--vinho);font-size:18px}
+.add{flex:none;background:#25d366;color:#fff;font-weight:600;font-size:13px;padding:9px 14px;border-radius:999px}
+.bevs{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:10px;max-width:820px;margin:0 auto}
+.bev{display:flex;justify-content:space-between;gap:10px;background:#fff;border:1px solid #f3e6cf;border-radius:14px;padding:12px 16px;font-size:15px}.bev b{color:var(--vinho);white-space:nowrap}
+@media(max-width:400px){.menu{grid-template-columns:1fr}.item{flex-wrap:wrap}.add{width:100%;text-align:center}}
 .alt{background:#fff}
 .gal{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px}
 .gal figure{background:#fff;border-radius:22px;overflow:hidden;box-shadow:0 8px 28px rgba(122,31,43,.12)}
@@ -91,7 +104,7 @@ footer a{color:var(--vinho);font-weight:600}
 <header><div class="wrap nav">
   <a href="#" class="brand"><img class="logo" src="/img/logo.jpg" alt="HL Sabores"><b>HL Sabores</b></a>
   <nav><a href="#cardapio">Cardápio</a><a href="#fotos">Fotos</a><a href="#ocasioes">Ocasiões</a><a href="#como">Como pedir</a><a href="#sobre">Sobre</a></nav>
-  <a class="btn sm" href="https://wa.me/5561996696286?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20fazer%20um%20pedido%20%F0%9F%98%8A" target="_blank">Pedir agora</a>
+  <a class="btn sm" href="https://wa.me/5561984554266?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20fazer%20um%20pedido%20%F0%9F%98%8A" target="_blank">Pedir agora</a>
 </div></header>
 
 <section class="hero" style="padding:0"><div class="wrap">
@@ -100,7 +113,7 @@ footer a{color:var(--vinho);font-weight:600}
     <h1>Sabor de <em>comida de mãe</em> em cada mordida</h1>
     <p>Mini salgados, mini pizzas e salgados assados feitos à mão, frescos ou congelados. Entregamos no seu endereço ou você retira.</p>
     <div class="ctas">
-      <a class="btn" href="https://wa.me/5561996696286?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20fazer%20um%20pedido%20%F0%9F%98%8A" target="_blank"><svg width="20" height="20" viewBox="0 0 24 24" fill="#fff"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1s-.5-.1-.7.1-.8 1-.9 1.2-.3.2-.6.1a8 8 0 0 1-4-3.5c-.3-.5.3-.5.9-1.6.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6a1.2 1.2 0 0 0-.8.4 3.5 3.5 0 0 0-1.1 2.6 6.1 6.1 0 0 0 1.3 3.2 13.8 13.8 0 0 0 5.3 4.7c2 .9 2.8.9 3.8.8a3.2 3.2 0 0 0 2.1-1.5 2.6 2.6 0 0 0 .2-1.5c-.1-.1-.3-.2-.6-.3zM12 21.8a9.9 9.9 0 0 1-5-1.4l-.4-.2-3.7 1 1-3.6-.2-.4A9.8 9.8 0 1 1 12 21.8zM20.5 3.5A11.8 11.8 0 0 0 1.9 17.7L.2 24l6.4-1.7A11.8 11.8 0 0 0 24 12a11.7 11.7 0 0 0-3.5-8.5z"/></svg>Pedir pelo WhatsApp</a>
+      <a class="btn" href="https://wa.me/5561984554266?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20fazer%20um%20pedido%20%F0%9F%98%8A" target="_blank"><svg width="20" height="20" viewBox="0 0 24 24" fill="#fff"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1s-.5-.1-.7.1-.8 1-.9 1.2-.3.2-.6.1a8 8 0 0 1-4-3.5c-.3-.5.3-.5.9-1.6.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6a1.2 1.2 0 0 0-.8.4 3.5 3.5 0 0 0-1.1 2.6 6.1 6.1 0 0 0 1.3 3.2 13.8 13.8 0 0 0 5.3 4.7c2 .9 2.8.9 3.8.8a3.2 3.2 0 0 0 2.1-1.5 2.6 2.6 0 0 0 .2-1.5c-.1-.1-.3-.2-.6-.3zM12 21.8a9.9 9.9 0 0 1-5-1.4l-.4-.2-3.7 1 1-3.6-.2-.4A9.8 9.8 0 1 1 12 21.8zM20.5 3.5A11.8 11.8 0 0 0 1.9 17.7L.2 24l6.4-1.7A11.8 11.8 0 0 0 24 12a11.7 11.7 0 0 0-3.5-8.5z"/></svg>Pedir pelo WhatsApp</a>
       <a class="btn out" href="#cardapio">Ver cardápio</a>
     </div>
   </div>
@@ -113,16 +126,23 @@ footer a{color:var(--vinho);font-weight:600}
 </div></section>
 
 <section id="cardapio"><div class="wrap">
-  <div class="title reveal"><small>Nosso cardápio</small><h2>Feitos com carinho, todo dia</h2><p>Massa caseira, recheio generoso e aquele toque especial que só receita de mãe tem.</p></div>
-  <div class="grid">
-    <div class="card reveal"><div class="ic">🥟</div><h3>Mini salgados</h3><p>Perfeitos para festas, lanche da escola e para ter sempre no freezer.</p></div>
-    <div class="card reveal"><div class="ic">🍕</div><h3>Mini pizzas</h3><p>Queridinhas da criançada — saem quentinhas e cheias de sabor.</p></div>
-    <div class="card reveal"><div class="ic">🍔</div><h3>Hambúrguer com cheddar</h3><p>Salgado assado recheado com hambúrguer suculento e muito cheddar.</p></div>
-    <div class="card reveal"><div class="ic">🍗</div><h3>Frango com requeijão</h3><p>Assado de frango cremoso com requeijão, o clássico que nunca falha.</p></div>
-    <div class="card reveal"><div class="ic">🌭</div><h3>Doguinhos</h3><p>Nossa versão assada do cachorro-quente, com nova modelagem.</p></div>
-    <div class="card reveal"><div class="ic">🧀</div><h3>Enrolado de queijo</h3><p>Doce que conquista: muito queijo, cobertura cremosa de leite condensado e coco.</p></div>
-    <div class="card reveal"><div class="ic">❄️</div><h3>Congelados</h3><p>Leve pronto para assar em casa: praticidade para a semana inteira.</p></div>
+  <div class="title reveal"><small>Nosso cardápio</small><h2>Salgados assados</h2><p>Massa caseira, recheio generoso e aquele toque especial que só receita de mãe tem.</p></div>
+  <div class="info-bar reveal"><span>🕘 Aberto das 09:00 às 20:00</span><span>🛵 Delivery ou retirada</span><span>🧾 Pedido mínimo: R$ 20,00</span></div>
+  <div class="menu">
+    <div class="item reveal"><div class="ic">🧀</div><div class="tx"><h3>Queijo</h3><p>Salgado suculento com queijo derretido.</p><div class="pr"><s>R$ 12,00</s><b>R$ 10,00</b></div></div><a class="add" href="https://wa.me/5561984554266?text=Ol%C3%A1%21%20Vim%20pelo%20site%20e%20quero%20pedir%3A%20Queijo" target="_blank" aria-label="Pedir Queijo">Pedir</a></div>
+    <div class="item reveal"><div class="ic">🥥</div><div class="tx"><h3>Queijo doce</h3><p>Salgado suculento de queijo derretido coberto com leite condensado e coco ralado.</p><div class="pr"><s>R$ 12,00</s><b>R$ 10,00</b></div></div><a class="add" href="https://wa.me/5561984554266?text=Ol%C3%A1%21%20Vim%20pelo%20site%20e%20quero%20pedir%3A%20Queijo%20doce" target="_blank" aria-label="Pedir Queijo doce">Pedir</a></div>
+    <div class="item reveal"><div class="ic">🍔</div><div class="tx"><h3>Burger</h3><p>Salgado de carne de hambúrguer com queijo cheddar cremoso.</p><div class="pr"><s>R$ 12,00</s><b>R$ 10,00</b></div></div><a class="add" href="https://wa.me/5561984554266?text=Ol%C3%A1%21%20Vim%20pelo%20site%20e%20quero%20pedir%3A%20Burger" target="_blank" aria-label="Pedir Burger">Pedir</a></div>
+    <div class="item reveal"><div class="ic">🥩</div><div class="tx"><h3>Esfirra carne</h3><p>Salgado de carne moída temperada.</p><div class="pr"><s>R$ 12,00</s><b>R$ 10,00</b></div></div><a class="add" href="https://wa.me/5561984554266?text=Ol%C3%A1%21%20Vim%20pelo%20site%20e%20quero%20pedir%3A%20Esfirra%20carne" target="_blank" aria-label="Pedir Esfirra carne">Pedir</a></div>
+    <div class="item reveal"><div class="ic">🥓</div><div class="tx"><h3>Palmito com bacon</h3><p>Salgado de palmito com bacon em cubos, mussarela e catupiry original.</p><div class="pr"><s>R$ 12,00</s><b>R$ 10,00</b></div></div><a class="add" href="https://wa.me/5561984554266?text=Ol%C3%A1%21%20Vim%20pelo%20site%20e%20quero%20pedir%3A%20Palmito%20com%20bacon" target="_blank" aria-label="Pedir Palmito com bacon">Pedir</a></div>
+    <div class="item reveal"><div class="ic">🍕</div><div class="tx"><h3>Calabresa</h3><p>Salgado de calabresa fatiada, queijo e molho de tomate.</p><div class="pr"><s>R$ 12,00</s><b>R$ 10,00</b></div></div><a class="add" href="https://wa.me/5561984554266?text=Ol%C3%A1%21%20Vim%20pelo%20site%20e%20quero%20pedir%3A%20Calabresa" target="_blank" aria-label="Pedir Calabresa">Pedir</a></div>
+    <div class="item reveal"><div class="ic">🍕</div><div class="tx"><h3>Pão Pizza</h3><p>Salgado de presunto, queijo e calabresa ralados, temperados com orégano e molho de tomate.</p><div class="pr"><s>R$ 12,00</s><b>R$ 10,00</b></div></div><a class="add" href="https://wa.me/5561984554266?text=Ol%C3%A1%21%20Vim%20pelo%20site%20e%20quero%20pedir%3A%20P%C3%A3o%20Pizza" target="_blank" aria-label="Pedir Pão Pizza">Pedir</a></div>
+    <div class="item reveal"><div class="ic">🥪</div><div class="tx"><h3>Presunto</h3><p>Salgado de presunto e queijo.</p><div class="pr"><s>R$ 12,00</s><b>R$ 10,00</b></div></div><a class="add" href="https://wa.me/5561984554266?text=Ol%C3%A1%21%20Vim%20pelo%20site%20e%20quero%20pedir%3A%20Presunto" target="_blank" aria-label="Pedir Presunto">Pedir</a></div>
+    <div class="item reveal"><div class="ic">🍗</div><div class="tx"><h3>Frango</h3><p>Salgado de frango desfiado e temperado, com catupiry original.</p><div class="pr"><s>R$ 12,00</s><b>R$ 10,00</b></div></div><a class="add" href="https://wa.me/5561984554266?text=Ol%C3%A1%21%20Vim%20pelo%20site%20e%20quero%20pedir%3A%20Frango" target="_blank" aria-label="Pedir Frango">Pedir</a></div>
+    <div class="item reveal"><div class="ic">🌭</div><div class="tx"><h3>Dog</h3><p>Salgado de salsicha com delicioso molho de tomate, queijo e catupiry original.</p><div class="pr"><s>R$ 12,00</s><b>R$ 10,00</b></div></div><a class="add" href="https://wa.me/5561984554266?text=Ol%C3%A1%21%20Vim%20pelo%20site%20e%20quero%20pedir%3A%20Dog" target="_blank" aria-label="Pedir Dog">Pedir</a></div>
   </div>
+  <div class="title reveal" style="margin:56px 0 24px"><h2>Bebidas</h2></div>
+  <div class="bevs reveal"><div class="bev"><span>🥤 Suco Nutri néctar uva (lata)</span><b>R$ 6,90</b></div><div class="bev"><span>🥤 Suco Nutri néctar pêssego</span><b>R$ 6,90</b></div><div class="bev"><span>🥤 Guaraná Antarctica (lata)</span><b>R$ 6,90</b></div><div class="bev"><span>🥤 Fanta Uva (lata)</span><b>R$ 6,90</b></div><div class="bev"><span>🥤 Fanta (lata)</span><b>R$ 6,90</b></div><div class="bev"><span>🥤 Coca-Cola Zero (lata)</span><b>R$ 6,90</b></div><div class="bev"><span>🥤 Coca-Cola (lata)</span><b>R$ 6,90</b></div></div>
+  <p style="text-align:center;margin-top:30px"><a class="btn" href="https://wa.me/5561984554266?text=Ol%C3%A1%21%20Vim%20pelo%20site%20e%20quero%20fazer%20um%20pedido%20%F0%9F%98%8A" target="_blank">Montar meu pedido no WhatsApp</a></p>
 </div></section>
 
 <section class="alt" id="fotos"><div class="wrap">
@@ -168,18 +188,18 @@ footer a{color:var(--vinho);font-weight:600}
   <div class="cta reveal">
     <h2>Bateu a vontade?</h2>
     <p>Faça sua encomenda agora mesmo e receba quentinho ou congelado.</p>
-    <a class="btn" href="https://wa.me/5561996696286?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20fazer%20um%20pedido%20%F0%9F%98%8A" target="_blank">Fazer meu pedido</a>
+    <a class="btn" href="https://wa.me/5561984554266?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20fazer%20um%20pedido%20%F0%9F%98%8A" target="_blank">Fazer meu pedido</a>
   </div>
 </div></section>
 
 <footer><div class="wrap">
   <div class="brand"><img class="logo" src="/img/logo.jpg" alt="HL Sabores"><b style="font-family:'Playfair Display',serif;color:var(--vinho);font-size:20px">HL Sabores</b></div>
-  <p>Valparaíso de Goiás e entorno de Brasília · Delivery e retirada</p>
-  <p>WhatsApp <a href="https://wa.me/5561996696286" target="_blank">(61) 99669-6286</a> · Instagram <a href="https://instagram.com/hlsaboresgourmet" target="_blank">@hlsaboresgourmet</a> · <a href="/cartao">Cartão virtual</a></p>
+  <p>Valparaíso de Goiás e entorno de Brasília · Delivery e retirada · Todos os dias das 09:00 às 20:00</p>
+  <p>WhatsApp <a href="https://wa.me/5561984554266" target="_blank">(61) 98455-4266</a> · Instagram <a href="https://instagram.com/hlsaboresgourmet" target="_blank">@hlsaboresgourmet</a> · <a href="/cartao">Cartão virtual</a></p>
   <p style="margin-top:14px;font-size:12px">Site por <a href="https://btechsouto.shop" target="_blank">Btech Solution and Growth</a></p>
 </div></footer>
 
-<a class="fab" href="https://wa.me/5561996696286?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20fazer%20um%20pedido%20%F0%9F%98%8A" target="_blank" aria-label="WhatsApp"><svg width="30" height="30" viewBox="0 0 24 24" fill="#fff"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1s-.5-.1-.7.1-.8 1-.9 1.2-.3.2-.6.1a8 8 0 0 1-4-3.5c-.3-.5.3-.5.9-1.6.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6a1.2 1.2 0 0 0-.8.4 3.5 3.5 0 0 0-1.1 2.6 6.1 6.1 0 0 0 1.3 3.2 13.8 13.8 0 0 0 5.3 4.7c2 .9 2.8.9 3.8.8a3.2 3.2 0 0 0 2.1-1.5 2.6 2.6 0 0 0 .2-1.5c-.1-.1-.3-.2-.6-.3zM12 21.8a9.9 9.9 0 0 1-5-1.4l-.4-.2-3.7 1 1-3.6-.2-.4A9.8 9.8 0 1 1 12 21.8zM20.5 3.5A11.8 11.8 0 0 0 1.9 17.7L.2 24l6.4-1.7A11.8 11.8 0 0 0 24 12a11.7 11.7 0 0 0-3.5-8.5z"/></svg></a>
+<a class="fab" href="https://wa.me/5561984554266?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20fazer%20um%20pedido%20%F0%9F%98%8A" target="_blank" aria-label="WhatsApp"><svg width="30" height="30" viewBox="0 0 24 24" fill="#fff"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1s-.5-.1-.7.1-.8 1-.9 1.2-.3.2-.6.1a8 8 0 0 1-4-3.5c-.3-.5.3-.5.9-1.6.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6a1.2 1.2 0 0 0-.8.4 3.5 3.5 0 0 0-1.1 2.6 6.1 6.1 0 0 0 1.3 3.2 13.8 13.8 0 0 0 5.3 4.7c2 .9 2.8.9 3.8.8a3.2 3.2 0 0 0 2.1-1.5 2.6 2.6 0 0 0 .2-1.5c-.1-.1-.3-.2-.6-.3zM12 21.8a9.9 9.9 0 0 1-5-1.4l-.4-.2-3.7 1 1-3.6-.2-.4A9.8 9.8 0 1 1 12 21.8zM20.5 3.5A11.8 11.8 0 0 0 1.9 17.7L.2 24l6.4-1.7A11.8 11.8 0 0 0 24 12a11.7 11.7 0 0 0-3.5-8.5z"/></svg></a>
 <script>
 const io=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('on');io.unobserve(x.target)}}),{threshold:.12});
 document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
