@@ -266,9 +266,12 @@ document.addEventListener('change',e=>{if(e.target.id==='fpag')document.getEleme
 function sendOrder(){const{t}=totals();if(t<MIN)return;const nome=document.getElementById('fnome').value.trim();const tipo=document.querySelector('input[name=tipo]:checked').value;const end=document.getElementById('fendv').value.trim();
  if(!nome){alert('Informe seu nome 😊');return}if(tipo==='Delivery'&&!end){alert('Informe o endereço de entrega');return}
  const pag=document.getElementById('fpag').value,troco=document.getElementById('ftrocov').value.trim(),obs=document.getElementById('fobs').value.trim();
- let m=`*Novo pedido — HL Sabores* 🥟\n\n`;for(const k in cart)m+=`${cart[k].q}x ${k} — ${brl(cart[k].q*cart[k].p)}\n`;
- m+=`\n*Total: ${brl(t)}*\n\n👤 Nome: ${nome}\n${tipo==='Delivery'?'🛵 Delivery\n📍 Endereço: '+end:'🏠 Retirada'}\n💳 Pagamento: ${pag}${pag==='Dinheiro'&&troco?' (troco para '+troco+')':''}`;if(obs)m+=`\n📝 Obs.: ${obs}`;
- window.open('https://wa.me/'+PHONE+'?text='+encodeURIComponent(m),'_blank');}
+ const L='━━━━━━━━━━━━━━━';const d=new Date(),hh=d.toLocaleTimeString('pt-BR',{hour:'2-digit',minute:'2-digit'}),dd=d.toLocaleDateString('pt-BR');
+ let m=`✨ *NOVO PEDIDO - HL SABORES* ✨\n${L}\n`;for(const k in cart)m+=`✅ *${cart[k].q}x* ${k} — ${brl(cart[k].q*cart[k].p)}\n`;
+ m+=`${L}\n⭐ *TOTAL: ${brl(t)}*\n${L}\n✏️ *Nome:* ${nome}\n⏩ *Receber:* ${tipo}\n`;if(tipo==='Delivery')m+=`➡️ *Endereço:* ${end}\n`;
+ m+=`✔️ *Pagamento:* ${pag}${pag==='Dinheiro'&&troco?' (troco para '+troco+')':''}\n`;if(obs)m+=`✍️ *Obs.:* ${obs}\n`;
+ m+=`${L}\n⏰ Pedido feito pelo site em ${dd} às ${hh}\n❤️ Obrigado pela preferência!`;
+ window.open('https://api.whatsapp.com/send?phone='+PHONE+'&text='+encodeURIComponent(m),'_blank');}
 renderQty();
 
 const io=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('on');io.unobserve(x.target)}}),{threshold:.12});
