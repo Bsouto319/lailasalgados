@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>HL Sabores — Cartão virtual</title>
+<meta name="theme-color" content="#7a1f2b">
+<link rel="icon" href="/img/logo.jpg">
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Poppins,sans-serif;min-height:100vh;background:linear-gradient(160deg,#5a1520,#7a1f2b 50%,#9c2b39);display:flex;justify-content:center;align-items:flex-start;padding:30px 16px}
+.card{width:100%;max-width:400px;background:#fff8ec;border-radius:28px;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,.35);text-align:center}
+.top{background:linear-gradient(rgba(90,21,32,.55),rgba(90,21,32,.85)),url(/img/foto2.jpg) center/cover,radial-gradient(circle at 80% 0,rgba(232,185,49,.45),transparent 55%),linear-gradient(135deg,#5a1520,#7a1f2b);padding:34px 20px 70px;color:#fff}
+.top small{opacity:.85;font-size:13px;letter-spacing:1px}
+.logo{width:120px;height:120px;margin:-60px auto 0;border-radius:50%;background:radial-gradient(circle at 35% 30%,#fff3c4,#e8b931 60%,#c9961a);display:grid;place-items:center;box-shadow:0 0 0 6px #fff8ec,0 10px 30px rgba(0,0,0,.25)}
+.logo{object-fit:cover}
+.xx{font-family:'Great Vibes',cursive;font-size:68px;color:#5a1520;line-height:1;margin-top:8px}
+h1{font-family:'Playfair Display',serif;color:#5a1520;font-size:30px;margin-top:14px}
+.sub{color:#7b6658;font-size:14px;padding:0 24px;margin:4px 0 22px}
+.links{display:flex;flex-direction:column;gap:12px;padding:0 22px}
+.links a{display:flex;align-items:center;gap:14px;padding:15px 18px;border-radius:16px;text-decoration:none;font-weight:600;color:#3a2a20;background:#fff;border:1px solid #f0e2c8;transition:transform .15s}
+.links a:active{transform:scale(.98)}
+.links a.wa{background:#25d366;color:#fff;border:none}
+.links .i{font-size:22px;width:28px}
+.info{margin:22px 22px 0;padding:16px;border-radius:16px;background:#fff;border:1px dashed #e7cf9e;font-size:14px;color:#7b6658;text-align:left;line-height:1.8}
+.share{display:flex;gap:10px;padding:22px}
+.share button{flex:1;padding:13px;border-radius:14px;border:2px solid #7a1f2b;background:transparent;color:#7a1f2b;font:600 14px Poppins,sans-serif;cursor:pointer}
+.share button.f{background:#7a1f2b;color:#fff}
+.foot{font-size:11px;color:#a08c7d;padding-bottom:20px}
+.foot a{color:#7a1f2b}
+</style>
+</head>
+<body>
+<div class="card">
+  <div class="top"><small>SALGADOS ARTESANAIS</small></div>
+  <img class="logo" src="/img/logo.jpg" alt="HL Sabores">
+  <h1>HL Sabores</h1>
+  <p class="sub">Feito com amor, pensado para você 💛<br>Salgados frescos ou congelados</p>
+  <div class="links">
+    <a class="wa" href="https://wa.me/5561996696286?text=Ol%C3%A1!%20Vi%20seu%20cart%C3%A3o%20e%20quero%20fazer%20um%20pedido" target="_blank"><span class="i">💬</span>Fazer pedido no WhatsApp</a>
+    <a href="tel:+5561996696286"><span class="i">📞</span>(61) 99669-6286</a>
+    <a href="https://instagram.com/hlsaboresgourmet" target="_blank"><span class="i">📸</span>@hlsaboresgourmet</a>
+    <a href="/"><span class="i">🌐</span>Ver cardápio no site</a>
+  </div>
+  <div class="info">🥟 Mini salgados · 🍕 Mini pizzas · Assados<br>🏍️ Delivery ou retirada (sem loja física)<br>📍 Valparaíso de Goiás e entorno de Brasília</div>
+  <div class="share">
+    <button class="f" onclick="share()">Compartilhar</button>
+    <button onclick="saveContact()">Salvar contato</button>
+  </div>
+  <p class="foot">Por <a href="https://btechsouto.shop" target="_blank">Btech Solution and Growth</a></p>
+</div>
+<script>
+function share(){const d={title:'HL Sabores',text:'Salgados artesanais HL Sabores — peça pelo WhatsApp!',url:location.href};if(navigator.share)navigator.share(d).catch(()=>{});else{navigator.clipboard.writeText(location.href);alert('Link copiado!')}}
+function saveContact(){const v=`BEGIN:VCARD\nVERSION:3.0\nFN:HL Sabores\nORG:HL Sabores\nTEL;TYPE=CELL:+5561996696286\nURL:${location.origin}\nNOTE:Salgados artesanais - delivery e retirada em Valparaíso de Goiás\nEND:VCARD`;const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([v],{type:'text/vcard'}));a.download='HL-Sabores.vcf';a.click()}
+</script>
+</body>
+</html>
